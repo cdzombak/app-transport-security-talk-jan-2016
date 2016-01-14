@@ -197,9 +197,7 @@ App Transport Security rules apply to `NSURLSession`, `NSURLConnection`, `libcur
 
 ^ These rules are implemented at a low level in the networking stack — somewhere in Core Foundation Networking.
 
-^ So ATS enforces its rules on NSURLSession and the older NSURLConnection APIs.
-
-^ And on things like libcurl which you may embed in your app and use Core Foundation’s networking APIs.
+^ So ATS enforces its rules on `NSURLSession` and the older `NSURLConnection` APIs, and on lower-level code which uses Core Foundation networking directly.
 
 ---
 
@@ -277,13 +275,13 @@ NSAppTransportSecurity : Dictionary {
 }
 ```
 
-^ Here’s the general structure of the App Transport Security dictionary in your Info.plist.
+^ Here’s the general structure of the App Transport Security dictionary in your `Info.plist`.
 
-^ The keys and possible values are all documented, in Apple’s Cocoa documentation about Info.plist: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
+^ The keys and possible values are all documented, in Apple’s Cocoa documentation about `Info.plist`: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
 
 ^ The gist is, we can include an exception domain name, and under that domain name we can tell App Transport Security what exceptions apply for that domain.
 
-^ Let’s dig into the NSExceptionDomains key.
+^ Let’s dig into the `NSExceptionDomains` key.
 
 ---
 
@@ -292,11 +290,11 @@ NSAppTransportSecurity : Dictionary {
 - Optional.
 - Dictionary. Keys are domain names; values are dictionaries.
 
-^ The NSExceptionDomains key goes into the App Transport Security dictionary in your `Info.plist`.
+^ The `NSExceptionDomains` key goes into the App Transport Security dictionary in your `Info.plist`.
 
 ^ This is a dictionary, whose keys are domains you want to configure App Transport Security exceptions for.
 
-^ These have to be lowercase domain names, not numerical IPs, and no port numbers.
+^ These have to be lowercase domain names, not numeric IPs, and no port numbers.
 
 ^ Within an exception domain dictionary, we can place any of several keys…
 
