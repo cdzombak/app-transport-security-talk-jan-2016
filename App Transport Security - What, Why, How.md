@@ -13,7 +13,7 @@
 
 ---
 
-# [fit] Don’t take notes.
+## Don’t take notes.
 
 ^ We’re going to cover a lot of ground in this talk, but don’t worry about taking notes.
 
