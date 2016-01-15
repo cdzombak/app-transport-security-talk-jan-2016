@@ -835,10 +835,3 @@ Publishers can add an exception to their Info.plist to allow any insecure connec
 ---
 
 # [fit] Questions/Discussion
-
----
-
-# TODO
-
-- review flow to ensure talk makes sense and I have the right balance of info on slides
-- check for aportrophes, quotes, etc in notes and slides
