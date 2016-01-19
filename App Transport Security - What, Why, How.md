@@ -193,7 +193,7 @@
 
 # ATS is implemented somewhere in Core Foundation territory
 
-App Transport Security rules apply to `NSURLSession`, `NSURLConnection`, `libcurl`, …
+App Transport Security rules apply to `NSURLSession`, `NSURLConnection`, etc.
 
 ^ These rules are implemented at a low level in the networking stack — somewhere in Core Foundation Networking.
 
